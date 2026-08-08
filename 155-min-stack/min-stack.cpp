@@ -1,5 +1,7 @@
 class MinStack {
 public:
+    //TC-O(1);
+    //SC-O(2*n);
     stack<pair<int,int>> st;
     MinStack() {
         
