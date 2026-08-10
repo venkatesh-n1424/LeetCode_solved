@@ -1,0 +1,17 @@
+class Solution {
+public:
+    vector<int> dp;
+    bool solve(int rem){
+        if(rem==0) return false;
+        if(dp[rem]!=-1) return dp[rem];
+        int root=sqrt(rem);
+        for(int i=1;i<=root;i++){
+            if(!solve(rem-i*i)) return dp[rem]=1;
+        }
+        return dp[rem]=0;
+    }
+    bool winnerSquareGame(int n) {
+        dp.resize(n+1,-1);
+        return solve(n);
+    }
+};
