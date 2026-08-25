@@ -19,11 +19,15 @@ public:
         //hashmap
         unordered_set<int> mpp;
         for(int& num:nums) mpp.insert(num);
-        int i=1;
-        while(true){
-            if(mpp.find(k*i)==mpp.end()) return k*i;
-            i++;
+        // int i=1;
+        // while(true){
+        //     if(mpp.find(k*i)==mpp.end()) return k*i;
+        //     i++;
+        // }
+        int cur=k;
+        while(mpp.find(cur)!=mpp.end()){
+            cur+=k;
         }
-        return 0;
+        return cur;
     }
 };
