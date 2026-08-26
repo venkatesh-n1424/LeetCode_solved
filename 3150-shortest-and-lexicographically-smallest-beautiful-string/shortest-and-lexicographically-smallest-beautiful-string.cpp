@@ -18,6 +18,7 @@ public:
         //     if(!res.empty()) return res;
         // }
         // return "";
+        //sliding window
         int n=s.size(),i=0,j=0,ones=0;
         string res="";
         while(j<n){
