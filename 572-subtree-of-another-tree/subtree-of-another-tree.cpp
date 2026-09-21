@@ -16,6 +16,7 @@ public:
         return s->val==t->val && sameTree(s->left,t->left) && sameTree(s->right,t->right);
     }
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
+        if(!subRoot) return true;
         if(!root) return false;
         if(sameTree(root,subRoot))
         return true;
