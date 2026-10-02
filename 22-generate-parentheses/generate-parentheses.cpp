@@ -1,6 +1,7 @@
 class Solution {
 public:
     vector<string> generateParenthesis(int n) {
+        //TC-O(2^2n) SC-O(n)
         vector<string> res;
         function<void(int,string,int)> bt = [&](int start,string cur,int d){
             if(d<0) return;
