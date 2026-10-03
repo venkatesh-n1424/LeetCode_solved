@@ -2,7 +2,8 @@ class Solution {
 public:
     int longestValidParentheses(string s) {
         int n=s.size();
-        function<int(string,int,int)> check=[&](string s,int ov,int cv){
+        // function<int(string,int,int)> 
+        auto check=[&](string s,int ov,int cv){
             int d=0,res=0,l=0;
             for(int r=0;r<n;r++){
                 d+=(s[r]==')'?cv:ov);
